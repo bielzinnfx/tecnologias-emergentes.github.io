@@ -1,1 +1,1 @@
-https://bielzinnfx.github.io/tecnologias-emergentes.github.io/
+ https://bielzinnfx.github.io/tecnologias-emergentes.github.io/
