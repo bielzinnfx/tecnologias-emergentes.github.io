@@ -30,6 +30,28 @@
     .img-box{text-align:center;margin:20px 0;}
     .img-box img{width:80%;max-width:600px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.6);}
     footer{margin-top:40px;background:#001f3f;color:#aaa;text-align:center;padding:20px;}
+
+    /* Caixa abaixo do vídeo */
+    .video-fallback {
+      text-align: center;
+      background: #0d1b2a;
+      border: 1px solid #00bcd4;
+      color: #e0e0e0;
+      padding: 12px;
+      margin: 15px auto 30px;
+      width: fit-content;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,188,212,0.4);
+    }
+    .video-fallback a {
+      color: #00bcd4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .video-fallback a:hover {
+      color: #1de9b6;
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -45,7 +67,6 @@
     <a href="impacto.html">Impacto</a>
   </nav>
 
-  
   <!-- Carrossel -->
   <div class="carousel-container">
     <div class="carousel">
@@ -64,12 +85,18 @@
       <span class="dot"></span>
     </div>
   </div>
-  <!-- Vídeo incorporado -->
+
+  <!-- Conteúdo principal -->
   <main>
     <h2>Experiência em VR</h2>
-    <p>Confira um exemplo de como a realidade virtual funciona em jogos e simulações.</p>
+    <p>Confira um exemplo de como a realidade virtual funciona em simulações.</p>
     <div style="text-align:center; margin:20px 0;">
-      <iframe width="700" height="394" src="https://www.youtube.com/embed/EIPfLsrkI7Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="700" height="394" src="https://www.youtube.com/watch?v=qwLL8bygVgE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- Caixinha abaixo do vídeo -->
+    <div class="video-fallback">
+      Se o vídeo não funcionar clique <a href="https://www.youtube.com/watch?v=qwLL8bygVgE" target="_blank">AQUI</a>.
     </div>
 
     <h2>O que é Realidade Virtual?</h2>
@@ -81,9 +108,6 @@
        • Simuladores de voo e direção<br>
        • Turismo virtual em locais históricos</p>
 
-    <div class="img-box">
-      <img src="https://cdn.pixabay.com/photo/2016/11/29/09/32/vr-1868791_1280.jpg" alt="Pessoa usando VR">
-    </div>
   </main>
 
   <footer>
@@ -114,3 +138,4 @@
   </script>
 </body>
 </html>
+
