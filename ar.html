@@ -71,6 +71,29 @@
     .img-box{text-align:center;margin:20px 0;}
     .img-box img{width:80%;max-width:600px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.6);}
     .video-container { text-align:center; margin:20px 0; }
+
+    /* Caixa abaixo do vídeo */
+    .video-fallback {
+      text-align: center;
+      background: #0d1b2a;
+      border: 1px solid #00bcd4;
+      color: #e0e0e0;
+      padding: 12px;
+      margin: 15px auto 30px;
+      width: fit-content;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,188,212,0.4);
+    }
+    .video-fallback a {
+      color: #00bcd4;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .video-fallback a:hover {
+      color: #1de9b6;
+      text-decoration: underline;
+    }
+
     footer{margin-top:40px;background:#001f3f;color:#aaa;text-align:center;padding:20px;}
   </style>
 </head>
@@ -108,8 +131,13 @@
 
 <!-- Vídeo -->
   <div class="video-container">
-    <h2>A diferença entre Realidade Aumentada e Realidade Virtual: </h2></h2>
+    <h2>A diferença entre Realidade Aumentada e Realidade Virtual:</h2>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/oJvFwen0ExI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <!-- Caixinha abaixo do vídeo -->
+  <div class="video-fallback">
+    ⚠️ Se o vídeo não funcionar clique <a href="https://www.youtube.com/watch?v=oJvFwen0ExI" target="_blank">AQUI</a>.
   </div>
 
   <main>
