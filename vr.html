@@ -1,141 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Realidade Virtual</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: linear-gradient(180deg,#0a0a0a,#0d1b2a,#000); color:#e0e0e0; line-height:1.6; }
-    header { background: linear-gradient(135deg,#001f3f,#003366); padding:30px; text-align:center; color:#fff; box-shadow:0 4px 12px rgba(0,0,0,0.6); }
-    nav { background:#111; padding:15px; text-align:center; position:sticky; top:0; }
-    nav a { color:#00bcd4; margin:0 20px; text-decoration:none; font-weight:bold; }
-    nav a:hover { color:#1de9b6; }
-
-    /* --- Carrossel --- */
-    .carousel-container { display:flex; justify-content:center; align-items:center; flex-direction:column; margin:30px auto; }
-    .carousel { position: relative; width: 700px; height: 300px; overflow: hidden; border-radius: 15px; box-shadow: 0 5px 20px rgba(0,0,0,0.7); }
-    .slides { display:flex; transition: transform 0.6s ease-in-out; }
-    .slides img { width: 700px; height: 300px; object-fit: cover; flex-shrink: 0; }
-    .prev, .next { position:absolute; top:50%; transform:translateY(-50%); background: rgba(0,0,0,0.5); color:white; border:none; padding:10px 15px; cursor:pointer; border-radius:50%; font-size:18px; }
-    .prev:hover, .next:hover { background: rgba(0,0,0,0.8); }
-    .prev { left:10px; } .next { right:10px; }
-    .dots { text-align:center; margin-top:12px; }
-    .dot { display:inline-block; width:10px; height:10px; margin:0 5px; background-color:#bbb; border-radius:50%; cursor:pointer; transition: background-color 0.3s; }
-    .dot.active { background-color:#00bcd4; }
-
-    main { padding:40px 20px; max-width:1000px; margin:auto; }
-    h2{color:#00bcd4;margin-bottom:15px;}
-    p{margin-bottom:20px;}
-    .img-box{text-align:center;margin:20px 0;}
-    .img-box img{width:80%;max-width:600px;border-radius:12px;box-shadow:0 4px 15px rgba(0,0,0,0.6);}
-    footer{margin-top:40px;background:#001f3f;color:#aaa;text-align:center;padding:20px;}
-
-    /* Caixa abaixo do vídeo */
-    .video-fallback {
-      text-align: center;
-      background: #0d1b2a;
-      border: 1px solid #00bcd4;
-      color: #e0e0e0;
-      padding: 12px;
-      margin: 15px auto 30px;
-      width: fit-content;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,188,212,0.4);
-    }
-    .video-fallback a {
-      color: #00bcd4;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .video-fallback a:hover {
-      color: #1de9b6;
-      text-decoration: underline;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Realidade Virtual</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
-  <header>
+
+<header>
     <h1>Realidade Virtual (VR)</h1>
-    <p>Imersão total em mundos digitais</p>
-  </header>
+</header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="vr.html">VR</a>
-    <a href="ar.html">AR</a>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="vr.html">Realidade Virtual</a>
+    <a href="ar.html">Realidade Aumentada</a>
     <a href="impacto.html">Impacto</a>
-  </nav>
+</nav>
 
-  <!-- Carrossel -->
-  <div class="carousel-container">
-    <div class="carousel">
-      <div class="slides">
-        <img src="https://blog.gokursos.com/wp-content/uploads/2023/03/homem-usando-oculos-inteligentes-tocando-uma-tela-virtual-remix-de-tecnologia-futuristica-digital_compressed-1199x800.jpg" alt="VR Óculos">
-        <img src="https://blog.oticasguarulhos.com.br/wp-content/uploads/2024/05/RA-x-RV.png" alt="AR Interativo">
-        <img src="https://img.odcdn.com.br/wp-content/uploads/2021/03/ar_shutterstock_1104131717-1920x1080.jpg" alt="Tecnologia VR">
-      </div>
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
+<div class="carousel">
+    <div class="carousel-images">
+        <img src="vr1.jpg" class="active">
+        <img src="vr2.jpg">
+        <img src="vr3.jpg">
     </div>
 
-    <div class="dots">
-      <span class="dot active"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-  </div>
-
-  <!-- Conteúdo principal -->
-  <main>
-    <h2>Experiência em VR</h2>
-    <p>Confira um exemplo de como a realidade virtual funciona em simulações.</p>
-    <div style="text-align:center; margin:20px 0;">
-      <iframe width="700" height="394" src="https://www.youtube.com/watch?v=qwLL8bygVgE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="carousel-buttons">
+        <button onclick="changeImage(-1)">Anterior</button>
+        <button onclick="changeImage(1)">Próxima</button>
     </div>
 
-    <!-- Caixinha abaixo do vídeo -->
-    <div class="video-fallback">
-      Se o vídeo não funcionar clique <a href="https://www.youtube.com/watch?v=qwLL8bygVgE" target="_blank">AQUI</a>.
+    <div class="indicators">
+        <div class="active" onclick="goToImage(0)"></div>
+        <div onclick="goToImage(1)"></div>
+        <div onclick="goToImage(2)"></div>
     </div>
+</div>
 
-    <h2>O que é Realidade Virtual?</h2>
-    <p>A Realidade Virtual (VR) transporta o usuário para um ambiente completamente digital, permitindo experiências imersivas em jogos, simulações e até treinamentos profissionais.</p>
+<h2 style="text-align:center">Vídeo Explicativo</h2>
 
-    <h2>Aplicações</h2>
-    <p>• Jogos interativos em 3D<br>
-       • Treinamentos militares e médicos<br>
-       • Simuladores de voo e direção<br>
-       • Turismo virtual em locais históricos</p>
+<div class="video-container" style="text-align:center;">
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/qwLL8bygVgE"
+        frameborder="0"
+        allowfullscreen></iframe>
+</div>
 
-  </main>
+<footer>
+    <p>© 2025 - Portal Tech Future</p>
+</footer>
 
-  <footer>
-    <p>&copy; 2025 - Realidade Virtual</p>
-  </footer>
-
-  <script>
-    const slides = document.querySelector('.slides');
-    const images = document.querySelectorAll('.slides img');
-    const dots = document.querySelectorAll('.dot');
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
-
-    let index = 0;
-
-    function showSlide(i) {
-      index = (i + images.length) % images.length;
-      slides.style.transform = `translateX(${-index * 700}px)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
-
-    next.addEventListener('click', () => showSlide(index + 1));
-    prev.addEventListener('click', () => showSlide(index - 1));
-    dots.forEach((dot,i) => dot.addEventListener('click', () => showSlide(i)));
-
-    setInterval(() => showSlide(index + 1), 4000);
-  </script>
 </body>
 </html>
-
