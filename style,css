@@ -1,0 +1,217 @@
+/* ------------------------------
+   RESET E BASE
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0a192f, #1e3a8a);
+  color: white;
+  line-height: 1.6;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+header {
+  text-align: center;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid #00d9ff;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* ------------------------------
+   MENU
+------------------------------ */
+nav {
+  background: #00000080;
+  padding: 12px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00d9ff;
+}
+
+/* RESPONSIVO DO MENU */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  nav a {
+    flex: 1 1 calc(50% - 10px);
+    padding: 8px 0;
+    background: #00000050;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ------------------------------
+   CARROSSEL
+------------------------------ */
+.carousel {
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00d9ff;
+}
+
+.carousel-images img {
+  width: 100%;
+  display: none;
+}
+
+.carousel-images img.active {
+  display: block;
+}
+
+/* Botões */
+.carousel-buttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.carousel-buttons button {
+  background: #00d9ff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin: 0 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Indicadores */
+.indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.indicators div {
+  width: 12px;
+  height: 12px;
+  background: gray;
+  display: inline-block;
+  margin: 0 3px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.indicators .active {
+  background: #00d9ff;
+}
+
+/* ------------------------------
+   CARDS (PÁGINA HOME)
+------------------------------ */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 20px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #ffffff50;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO DOS CARDS */
+@media (max-width: 600px) {
+  .card {
+    width: 95%;
+  }
+}
+
+/* ------------------------------
+   IFRAME RESPONSIVO (VÍDEOS)
+------------------------------ */
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  margin: 25px auto;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  border: 0;
+}
+
+/* Ajuste para telas maiores */
+@media (min-width: 700px) {
+  .video-container iframe {
+    height: 350px;
+  }
+}
+
+/* ------------------------------
+   TEXTO E TÍTULOS
+------------------------------ */
+h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #00d9ff;
+}
+
+p {
+  font-size: 1rem;
+  padding: 0 20px;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+footer {
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 18px;
+  border-top: 2px solid #00d9ff;
+  font-size: 1rem;
+}
+
+/* FOOTER RESPONSIVO */
+@media (max-width: 500px) {
+  footer {
+    font-size: 0.85rem;
+  }
+}
