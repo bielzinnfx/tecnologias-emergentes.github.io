@@ -1,47 +1,197 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Home - Portal Tech Future</title>
-<link rel="stylesheet" href="style.css">
-<script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site - VR, AR e Impactos</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    section {
+      padding-top: 80px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <h1>Portal Tech Future</h1>
-</header>
+  <!-- MENU FIXO -->
+  <header>
+    <h1>Realidade Virtual, Realidade Aumentada e Impactos</h1>
+    <p>Tecnologias Imersivas</p>
+  </header>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="vr.html">Realidade Virtual</a>
-    <a href="ar.html">Realidade Aumentada</a>
-    <a href="impacto.html">Impacto</a>
-</nav>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#vr">VR</a>
+    <a href="#ar">AR</a>
+    <a href="#impacto">Impacto</a>
+  </nav>
 
-<main>
-    <div class="card">
-        <h2>Realidade Virtual</h2>
-        <p>Mergulhe no mundo imersivo da VR.</p>
-        <a href="vr.html">Acessar</a>
-    </div>
+  <!-- ======================= -->
+  <!--        INÍCIO           -->
+  <!-- ======================= -->
+  <section id="inicio">
+    <main>
+      <h2>Bem-vindo</h2>
+      <p>Explore o mundo da Realidade Virtual, Realidade Aumentada e seus impactos na sociedade!</p>
 
-    <div class="card">
-        <h2>Realidade Aumentada</h2>
-        <p>O mundo real com elementos digitais.</p>
-        <a href="ar.html">Acessar</a>
-    </div>
+      <!-- CARROSSEL -->
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="slides">
+            <img src="https://blog.gokursos.com/wp-content/uploads/2023/03/homem-usando-oculos-inteligentes-tocando-uma-tela-virtual-remix-de-tecnologia-futuristica-digital_compressed-1199x800.jpg" alt="VR">
+            <img src="https://blog.oticasguarulhos.com.br/wp-content/uploads/2024/05/RA-x-RV.png" alt="AR">
+            <img src="https://img.odcdn.com.br/wp-content/uploads/2021/03/ar_shutterstock_1104131717-1920x1080.jpg" alt="Tecnologia">
+          </div>
+          <button class="prev">&#10094;</button>
+          <button class="next">&#10095;</button>
+        </div>
 
-    <div class="card">
-        <h2>Impacto</h2>
-        <p>Como VR e AR afetam o mundo.</p>
-        <a href="impacto.html">Acessar</a>
-    </div>
-</main>
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
 
-<footer>
-    <p>© 2025 - Portal Tech Future. Todos os direitos reservados.</p>
-</footer>
+      <!-- CARDS -->
+      <div class="cards-container">
+        <div class="card">
+          <img src="https://blog.gokursos.com/wp-content/uploads/2023/03/homem-usando-oculos-inteligentes-tocando-uma-tela-virtual-remix-de-tecnologia-futuristica-digital_compressed-1199x800.jpg">
+          <h3>Realidade Virtual</h3>
+          <a href="#vr">Ver mais</a>
+        </div>
+
+        <div class="card">
+          <img src="https://blog.oticasguarulhos.com.br/wp-content/uploads/2024/05/RA-x-RV.png">
+          <h3>Realidade Aumentada</h3>
+          <a href="#ar">Ver mais</a>
+        </div>
+
+        <div class="card">
+          <img src="https://img.odcdn.com.br/wp-content/uploads/2021/03/ar_shutterstock_1104131717-1920x1080.jpg">
+          <h3>Impacto</h3>
+          <a href="#impacto">Ver mais</a>
+        </div>
+      </div>
+
+    </main>
+  </section>
+
+  <!-- ======================= -->
+  <!--           VR            -->
+  <!-- ======================= -->
+  <section id="vr">
+    <main>
+      <h2>Realidade Virtual (VR)</h2>
+
+      <p>A Realidade Virtual transporta o usuário para um ambiente totalmente digital...</p>
+
+      <!-- EXPLICAÇÃO NO LUGAR DO VÍDEO -->
+      <div class="video-explicacao">
+        <h3>O que seria mostrado no vídeo?</h3>
+        <p>
+          O vídeo demonstraria como a Realidade Virtual funciona na prática, mostrando
+          pessoas utilizando óculos VR e interagindo com ambientes 100% digitais.
+        </p>
+        <p>
+          Ele explicaria que os sensores acompanham os movimentos da cabeça e das mãos,
+          permitindo que o usuário veja e interaja como se estivesse realmente “dentro”
+          do ambiente virtual.
+        </p>
+        <p>
+          Também mostraria aplicações reais como jogos, simulações, educação e medicina.
+        </p>
+      </div>
+
+      <h2>Aplicações</h2>
+      <p>• Jogos 3D<br>
+         • Simuladores<br>
+         • Treinamentos profissionais<br>
+         • Medicina e educação</p>
+
+    </main>
+  </section>
+
+  <!-- ======================= -->
+  <!--           AR            -->
+  <!-- ======================= -->
+  <section id="ar">
+    <main>
+      <h2>Realidade Aumentada (AR)</h2>
+
+      <p>A Realidade Aumentada combina elementos digitais com o mundo real...</p>
+
+      <div class="img-box">
+        <img src="https://blog.oticasguarulhos.com.br/wp-content/uploads/2024/05/RA-x-RV.png">
+      </div>
+
+      <p>Exemplos:</p>
+      <p>• Jogos como Pokémon Go<br>
+         • Cirurgia assistida<br>
+         • GPS com projeções<br>
+         • Filtros de redes sociais</p>
+
+    </main>
+  </section>
+
+  <!-- ======================= -->
+  <!--        IMPACTO          -->
+  <!-- ======================= -->
+  <section id="impacto">
+    <main>
+      <h2>Impactos das Tecnologias Imersivas</h2>
+
+      <p>As tecnologias VR e AR têm impacto profundo na educação, medicina, indústria e entretenimento.</p>
+
+      <div class="img-box">
+        <img src="https://img.odcdn.com.br/wp-content/uploads/2021/03/ar_shutterstock_1104131717-1920x1080.jpg">
+      </div>
+
+      <p>Impactos positivos:</p>
+      <p>• Aprendizado rápido<br>
+         • Treinamentos seguros<br>
+         • Economia de recursos<br>
+         • Melhora diagnósticos e cirurgias</p>
+
+      <p>Impactos negativos:</p>
+      <p>• Custo alto<br>
+         • Dependência tecnológica<br>
+         • Possíveis problemas de visão<br>
+         • Falta de acesso igual para todos</p>
+
+    </main>
+  </section>
+
+  <footer>
+    <p>Site</p>
+  </footer>
+
+
+  <!-- SCRIPT DO CARROSSEL -->
+  <script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const dots = document.querySelectorAll('.dot');
+    const prev = document.querySelector('.prev');
+    const next = document.querySelector('.next');
+    let index = 0;
+
+    function showSlide(i) {
+      index = (i + images.length) % images.length;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    next.addEventListener('click', () => showSlide(index + 1));
+    prev.addEventListener('click', () => showSlide(index - 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+    setInterval(() => showSlide(index + 1), 4000);
+  </script>
 
 </body>
 </html>
